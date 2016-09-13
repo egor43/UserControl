@@ -6,9 +6,15 @@
         xmlns:local="clr-namespace:UserControl_Myshko"
         xmlns:WpfControlLibrary1="clr-namespace:WpfControlLibrary1;assembly=WpfControlLibrary1" x:Class="UserControl_Myshko.MainWindow"
         mc:Ignorable="d"
-        Title="MainWindow" Height="350" Width="525">
+        Title="MainWindow" Height="230" Width="260" MinWidth="260" MinHeight="230">
     <Grid>
-        <WpfControlLibrary1:UserControl1 HorizontalAlignment="Left" Margin="80,92,0,0" VerticalAlignment="Top"/>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="76*"/>
+            <RowDefinition Height="113*"/>
+        </Grid.RowDefinitions>
 
+        <WpfControlLibrary1:UserControl1 x:Name="TableButton" HorizontalAlignment="Center" VerticalAlignment="Bottom" Margin="5" Grid.Row="1"/>
+        <TextBox x:Name="textBox" Margin="5" Grid.Row="0" HorizontalAlignment="Center" Width="{Binding ActualWidth, ElementName=TableButton, Mode=OneWay}" VerticalAlignment="Center"/>
+    
     </Grid>
 </Window>
