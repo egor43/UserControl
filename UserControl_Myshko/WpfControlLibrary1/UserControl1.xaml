@@ -4,22 +4,33 @@
              xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
              xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
              xmlns:local="clr-namespace:WpfControlLibrary1"
-             mc:Ignorable="d" 
-             d:DesignHeight="300" d:DesignWidth="300">
+             mc:Ignorable="d" Background="#FFFBFBFB" 
+            >
     <Grid>
-        <Grid HorizontalAlignment="Left" Height="300" VerticalAlignment="Top" Width="300">
-            <Grid.RowDefinitions>
-                <RowDefinition Height="auto"/>
-                <RowDefinition Height="auto"/>
-                <RowDefinition Height="auto"/>
-                <RowDefinition Height="auto"/>
-                <RowDefinition Height="auto"/>
-            </Grid.RowDefinitions>
+        <Grid HorizontalAlignment="Left" VerticalAlignment="Top">
             <Grid.ColumnDefinitions>
                 <ColumnDefinition Width="auto"/>
                 <ColumnDefinition Width="auto"/>
                 <ColumnDefinition Width="auto"/>
             </Grid.ColumnDefinitions>
+            <StackPanel Grid.Column="0">
+                <Button x:Name="number1" Content="1" Margin="3" Width="70"/>
+                <Button x:Name="number4" Content="4" Margin="3" Width="70"/>
+                <Button x:Name="number7" Content="7" Margin="3" Width="70"/>
+                <Button x:Name="backButton" Content="&lt;-" Margin="3" Width="70" Background="#FFFF6B6B"/>
+            </StackPanel>
+            <StackPanel Grid.Column="1">
+                <Button x:Name="number2" Content="2" Margin="3" Width="70"/>
+                <Button x:Name="number5" Content="5" Margin="3" Width="70"/>
+                <Button x:Name="number8" Content="8" Margin="3" Width="70"/>
+                <Button x:Name="number0" Content="0" Margin="3" Width="70"/>
+            </StackPanel>
+            <StackPanel Grid.Column="2">
+                <Button x:Name="number3" Content="3" Margin="3" Width="70"/>
+                <Button x:Name="number6" Content="6" Margin="3" Width="70"/>
+                <Button x:Name="number9" Content="9" Margin="3" Width="70"/>
+                <Button x:Name="OKbutton" Content="OK" Margin="3" Width="70" Background="#FF9AFF6B"/>
+            </StackPanel>
         </Grid>
 
     </Grid>
