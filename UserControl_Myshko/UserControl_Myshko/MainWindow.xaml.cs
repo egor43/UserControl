@@ -1,17 +1,7 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+﻿using SummBlockLibrary;
+using System;
 using System.Windows;
 using System.Windows.Controls;
-using System.Windows.Data;
-using System.Windows.Documents;
-using System.Windows.Input;
-using System.Windows.Media;
-using System.Windows.Media.Imaging;
-using System.Windows.Navigation;
-using System.Windows.Shapes;
 
 namespace UserControl_Myshko
 {
@@ -28,7 +18,7 @@ namespace UserControl_Myshko
 
         private void TableButton_NumClick(object sender, EventArgs e)
         {
-           // textBox.Text = ((Button)sender).Tag.ToString();
+           textBox.Text = SummBlock.IncomingSymbol(textBox.Text,((Button)sender).Tag.ToString(),'#');
         }
     }
 }

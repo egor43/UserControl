@@ -1,23 +1,26 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Text.RegularExpressions;
-using System.Threading.Tasks;
+﻿using System.Text.RegularExpressions;
 
 namespace SummBlockLibrary
 {
     public class SummBlock
     {
-        public string IncomingSymbol (string TextOfTextBlock, char Input, string FillCharacter)
+        public static string IncomingSymbol (string TextOfTextBlock, string Input, char FillCharacter)
         {
-            Match match = Regex.Match(TextOfTextBlock, FillCharacter);
             char[] DismemberedLine = TextOfTextBlock.ToCharArray();
-            if (match.Success)
+            string result = null;
+            for(int i=0;i<DismemberedLine.Length;i++)
             {
-                DismemberedLine[match.Groups[2].Index] = Input;
+                if(DismemberedLine[i]==FillCharacter)
+                {
+                    DismemberedLine[i] = Input[0];
+                    break;
+                }
             }
-            return DismemberedLine.ToString();
+            foreach(var ch in DismemberedLine)
+            {
+                result += ch;
+            }
+            return result ;
         }
     }
 }
