@@ -24,5 +24,13 @@ namespace WpfControlLibrary1
         {
             InitializeComponent();
         }
+        public delegate void UserControlDelegate(object sender, EventArgs e);
+        public event UserControlDelegate NumClick;
+        private void number_Click(object sender, RoutedEventArgs e)
+        {
+           if (NumClick!=null)
+            NumClick(sender, e);
+        }
+
     }
 }

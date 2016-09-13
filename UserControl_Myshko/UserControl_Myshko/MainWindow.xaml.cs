@@ -23,6 +23,12 @@ namespace UserControl_Myshko
         public MainWindow()
         {
             InitializeComponent();
+            
+        }
+
+        private void TableButton_NumClick(object sender, EventArgs e)
+        {
+           // textBox.Text = ((Button)sender).Tag.ToString();
         }
     }
 }
