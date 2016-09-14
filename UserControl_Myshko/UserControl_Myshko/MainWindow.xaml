@@ -6,7 +6,7 @@
         xmlns:local="clr-namespace:UserControl_Myshko"
         xmlns:WpfControlLibrary1="clr-namespace:WpfControlLibrary1;assembly=WpfControlLibrary1" x:Class="UserControl_Myshko.MainWindow"
         mc:Ignorable="d"
-        Title="MainWindow" Height="230" Width="260" MinWidth="260" MinHeight="230">
+        Title="MainWindow" Height="230" Width="260" MinWidth="260" MinHeight="230" ResizeMode="NoResize">
     <Grid>
         <Grid.RowDefinitions>
             <RowDefinition Height="76*"/>
@@ -14,7 +14,7 @@
         </Grid.RowDefinitions>
 
         <WpfControlLibrary1:UserControl1 x:Name="TableButton" HorizontalAlignment="Center" VerticalAlignment="Bottom" Margin="5" Grid.Row="1" NumClick="TableButton_NumClick" BackClick="TableButton_BackClick" OkayClick="TableButton_OkayClick"/>
-        <TextBox x:Name="textBox" Margin="5" Text="###-###-###" Grid.Row="0" HorizontalAlignment="Center" Width="{Binding ActualWidth, ElementName=TableButton, Mode=OneWay}" VerticalAlignment="Center" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" IsReadOnly="True" FontSize="20" Tag="###-###-###"/>
+        <TextBox x:Name="textBox" Margin="5" Text="###-###-###" Grid.Row="0" HorizontalAlignment="Center" Width="{Binding ActualWidth, ElementName=TableButton, Mode=OneWay}" VerticalAlignment="Center" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" IsReadOnly="True" FontSize="20" Tag="###-###-###" UseLayoutRounding="False"/>
     
     </Grid>
 </Window>
