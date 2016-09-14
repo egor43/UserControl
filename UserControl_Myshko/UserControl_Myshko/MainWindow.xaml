@@ -13,8 +13,8 @@
             <RowDefinition Height="113*"/>
         </Grid.RowDefinitions>
 
-        <WpfControlLibrary1:UserControl1 x:Name="TableButton" HorizontalAlignment="Center" VerticalAlignment="Bottom" Margin="5" Grid.Row="1" NumClick="TableButton_NumClick"/>
-        <TextBox x:Name="textBox" Margin="5" Text="###-###-###" Grid.Row="0" HorizontalAlignment="Center" Width="{Binding ActualWidth, ElementName=TableButton, Mode=OneWay}" VerticalAlignment="Center" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" IsReadOnly="True" FontSize="20"/>
+        <WpfControlLibrary1:UserControl1 x:Name="TableButton" HorizontalAlignment="Center" VerticalAlignment="Bottom" Margin="5" Grid.Row="1" NumClick="TableButton_NumClick" BackClick="TableButton_BackClick" OkayClick="TableButton_OkayClick"/>
+        <TextBox x:Name="textBox" Margin="5" Text="###-###-###" Grid.Row="0" HorizontalAlignment="Center" Width="{Binding ActualWidth, ElementName=TableButton, Mode=OneWay}" VerticalAlignment="Center" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" IsReadOnly="True" FontSize="20" Tag="###-###-###"/>
     
     </Grid>
 </Window>
