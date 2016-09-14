@@ -15,21 +15,21 @@
             </Grid.ColumnDefinitions>
             <StackPanel Grid.Column="0">
                 <Button x:Name="number1" Content="1" Margin="3" Width="70"  Tag="1" Click="number_Click"/>
-                <Button x:Name="number4" Content="4" Margin="3" Width="70" Tag="4"/>
-                <Button x:Name="number7" Content="7" Margin="3" Width="70" Tag="7"/>
-                <Button x:Name="backButton" Content="&lt;-" Margin="3" Width="70" Background="#FFFF6B6B" Tag="back"/>
+                <Button x:Name="number4" Content="4" Margin="3" Width="70" Tag="4" Click="number_Click"/>
+                <Button x:Name="number7" Content="7" Margin="3" Width="70" Tag="7" Click="number_Click"/>
+                <Button x:Name="backButton" Content="&lt;-" Margin="3" Width="70" Background="#FFFF6B6B" Tag="back" Click="backButton_Click"/>
             </StackPanel>
             <StackPanel Grid.Column="1">
-                <Button x:Name="number2" Content="2" Margin="3" Width="70" Tag="2"/>
-                <Button x:Name="number5" Content="5" Margin="3" Width="70" Tag="5"/>
-                <Button x:Name="number8" Content="8" Margin="3" Width="70" Tag="8"/>
-                <Button x:Name="number0" Content="0" Margin="3" Width="70" Tag="0"/>
+                <Button x:Name="number2" Content="2" Margin="3" Width="70" Tag="2" Click="number_Click"/>
+                <Button x:Name="number5" Content="5" Margin="3" Width="70" Tag="5" Click="number_Click"/>
+                <Button x:Name="number8" Content="8" Margin="3" Width="70" Tag="8" Click="number_Click"/>
+                <Button x:Name="number0" Content="0" Margin="3" Width="70" Tag="0" Click="number_Click"/>
             </StackPanel>
             <StackPanel Grid.Column="2">
-                <Button x:Name="number3" Content="3" Margin="3" Width="70" Tag="3"/>
-                <Button x:Name="number6" Content="6" Margin="3" Width="70" Tag="6"/>
-                <Button x:Name="number9" Content="9" Margin="3" Width="70" Tag="9"/>
-                <Button x:Name="OKbutton" Content="OK" Margin="3" Width="70" Background="#FF9AFF6B" Tag="okay"/>
+                <Button x:Name="number3" Content="3" Margin="3" Width="70" Tag="3" Click="number_Click"/>
+                <Button x:Name="number6" Content="6" Margin="3" Width="70" Tag="6" Click="number_Click"/>
+                <Button x:Name="number9" Content="9" Margin="3" Width="70" Tag="9" Click="number_Click"/>
+                <Button x:Name="OKbutton" Content="OK" Margin="3" Width="70" Background="#FF9AFF6B" Tag="okay" Click="OKbutton_Click"/>
             </StackPanel>
         </Grid>
 

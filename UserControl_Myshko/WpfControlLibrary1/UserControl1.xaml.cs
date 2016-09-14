@@ -26,11 +26,24 @@ namespace WpfControlLibrary1
         }
         public delegate void UserControlDelegate(object sender, EventArgs e);
         public event UserControlDelegate NumClick;
+        public event UserControlDelegate BackClick;
+        public event UserControlDelegate OkayClick;
         private void number_Click(object sender, RoutedEventArgs e)
         {
-           if (NumClick!=null)
-            NumClick(sender, e);
+            if (NumClick != null)
+                NumClick(sender, e);
         }
 
+        private void backButton_Click(object sender, RoutedEventArgs e)
+        {
+            if (BackClick != null)
+                BackClick(sender, e);
+        }
+
+        private void OKbutton_Click(object sender, RoutedEventArgs e)
+        {
+            if (OkayClick != null)
+                OkayClick(sender, e);
+        }
     }
 }
