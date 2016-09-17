@@ -16,6 +16,7 @@ namespace UserControl_Myshko
         public MainWindow()
         {
             InitializeComponent();
+            textBox.Text = textBox.Mask;
         }
 
         #region Обработчики событий

@@ -6,15 +6,13 @@
         xmlns:local="clr-namespace:UserControl_Myshko"
         xmlns:WpfControlLibrary1="clr-namespace:WpfControlLibrary1;assembly=WpfControlLibrary1" x:Class="UserControl_Myshko.MainWindow"
         mc:Ignorable="d"
-        Title="MainWindow" Height="230" Width="260" MinWidth="260" MinHeight="230" >
+        Title="MainWindow" FontSize="20" Height="320" Width="440" MinHeight="250" MinWidth="260">
     <Grid>
         <Grid.RowDefinitions>
-            <RowDefinition Height="76*"/>
-            <RowDefinition Height="113*"/>
+            <RowDefinition Height="60*"/>
+            <RowDefinition Height="140*"/>
         </Grid.RowDefinitions>
-
-        <WpfControlLibrary1:UserControl1 x:Name="TableButton" Margin="5" Grid.Row="1" NumClick="TableButton_NumClick" BackClick="TableButton_BackClick" OkayClick="TableButton_OkayClick" HorizontalAlignment="Center" VerticalAlignment="Center"/>
-        <MaskTextBox:NewTextBox x:Name="textBox" Mask="###-###-###" CharReplace="#" VerticalAlignment="Center" Margin="15" HorizontalContentAlignment="Center" VerticalContentAlignment="Center"/>
-
+        <WpfControlLibrary1:UserControl1 x:Name="TableButton" Grid.Row="1" NumClick="TableButton_NumClick" BackClick="TableButton_BackClick" OkayClick="TableButton_OkayClick"/>
+        <MaskTextBox:NewTextBox x:Name="textBox" Mask="###-###-###" CharReplace="#" Margin="15" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" FontSize="20"/>
     </Grid>
 </Window>
