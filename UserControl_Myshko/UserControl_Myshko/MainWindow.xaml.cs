@@ -27,7 +27,8 @@ namespace UserControl_Myshko
         /// <param name="e">Дополнительные параметры</param>
         private void TableButton_NumClick(object sender, EventArgs e)
         {
-            textBox.Text = SummBlock.IncomingSymbol(textBox.Text, ((Button)sender).Tag.ToString(), '#');
+            textBox.Mask = SummBlock.IncomingSymbol(textBox.Mask, ((Button)sender).Tag.ToString(), textBox.CharReplace);
+            textBox.Text = textBox.Mask;
         }
 
         /// <summary>
@@ -37,7 +38,8 @@ namespace UserControl_Myshko
         /// <param name="e">Дополнительные параметры</param>
         private void TableButton_BackClick(object sender, EventArgs e)
         {
-            textBox.Text = SummBlock.DeleteCharacter(textBox.Text, '#', '-');
+            textBox.Mask = SummBlock.DeleteCharacter(textBox.Mask, textBox.CharReplace, '-');
+            textBox.Text = textBox.Mask;
         }
 
         /// <summary>
@@ -47,9 +49,9 @@ namespace UserControl_Myshko
         /// <param name="e">Дополнительные параметры</param>
         private void TableButton_OkayClick(object sender, EventArgs e)
         {
-            if (SummBlock.CompareBlocks(textBox.Text, '-', 3)) MessageBox.Show("Сумма блоков равна!");
+            if (SummBlock.CompareBlocks(textBox.Mask, '-', 3)) MessageBox.Show("Сумма блоков равна!");
             else MessageBox.Show("Сумма блоков не равна!");
-            textBox.Text=textBox.Tag.ToString();
+            //textBox.Text=textBox.Tag.ToString();
         }
     }
     #endregion
