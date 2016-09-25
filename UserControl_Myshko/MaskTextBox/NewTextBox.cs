@@ -19,12 +19,19 @@ namespace MaskTextBox
     public class NewTextBox : TextBox
     {
         #region Поля
+        /// <summary>
+        /// Хранит значение Value;
+        /// </summary>
         private string val;
-
-        private bool validation = false;
         #endregion
 
         #region Свойства
+
+        /// <summary>
+        /// Устанавливает/возвращает значение данного элемента.
+        /// get: возвращает значение поля "val"
+        /// set: устанавливает значение в поле "val". Устанавливает и форматирует значение свойства "Text", базового класса, в соответствии со свойством "Mask"
+        /// </summary>
         public string Value
         {
             get
@@ -62,8 +69,22 @@ namespace MaskTextBox
                 }
             }
         }
+
+        /// <summary>
+        /// Устанавливает/возвращает значение маски данного элемента
+        /// </summary>
         public string Mask { get; set; }
+
+        /// <summary>
+        /// Устанавливает/возвращает символ заполнения пустого места в маске данного элемента
+        /// </summary>
         public char CharReplace { get; set; }
+
+        /// <summary>
+        /// Возвращает статус валидации значения данного элемента, расположенного в соответствии с маской.
+        /// true: если суммы блоков равны.
+        /// false: если элемент содержит только один блок или суммы блоков различны. 
+        /// </summary>
         public bool Validation
         {
             get
@@ -127,6 +148,10 @@ namespace MaskTextBox
         #endregion
 
         #region Методы
+
+        /// <summary>
+        /// Удаляет последний символ из значения элемента и вызывает свойство Value
+        /// </summary>
         public void DeleteCharacter()
         {
             string str = "";
