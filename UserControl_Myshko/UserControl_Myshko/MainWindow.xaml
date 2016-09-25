@@ -13,6 +13,6 @@
             <RowDefinition Height="140*"/>
         </Grid.RowDefinitions>
         <WpfControlLibrary1:UserControl1 x:Name="TableButton" Grid.Row="1" NumClick="TableButton_NumClick" BackClick="TableButton_BackClick" OkayClick="TableButton_OkayClick"/>
-        <MaskTextBox:NewTextBox x:Name="textBox" Mask="###-###-###" CharReplace="#" Margin="15" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" FontSize="20"/>
+        <MaskTextBox:NewTextBox x:Name="textBox" Mask="###-###-###" CharReplace="#" Value="12345" Margin="15" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" FontSize="20"/>
     </Grid>
 </Window>
