@@ -12,6 +12,7 @@ using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
+using System.ComponentModel;
 
 namespace MaskTextBox
 {
@@ -32,6 +33,8 @@ namespace MaskTextBox
         /// get: возвращает значение поля "val"
         /// set: устанавливает значение в поле "val". Устанавливает и форматирует значение свойства "Text", базового класса, в соответствии со свойством "Mask"
         /// </summary>
+        [Description("Значение элемента")]
+        [Category("Мои свойсва")]
         public string Value
         {
             get
@@ -73,11 +76,15 @@ namespace MaskTextBox
         /// <summary>
         /// Устанавливает/возвращает значение маски данного элемента
         /// </summary>
+        [Description("Маска элемента")]
+        [Category("Мои свойсва")]
         public string Mask { get; set; }
 
         /// <summary>
         /// Устанавливает/возвращает символ заполнения пустого места в маске данного элемента
         /// </summary>
+        [Description("Символ заполняющий место для вставки символа")]
+        [Category("Мои свойсва")]
         public char CharReplace { get; set; }
 
         /// <summary>
@@ -85,6 +92,8 @@ namespace MaskTextBox
         /// true: если суммы блоков равны.
         /// false: если элемент содержит только один блок или суммы блоков различны. 
         /// </summary>
+        [Description("Статус валидации элемента")]
+        [Category("Мои свойсва")]
         public bool Validation
         {
             get
